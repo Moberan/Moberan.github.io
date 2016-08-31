@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Moc.js Demo</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.html" class="site_title"><i class="fa fa-magic"></i> <span>Moc.js</span></a>
+                </div>
+                <div class="clearfix"></div>
+                <br/>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu_section">
+                        <h3>Demo</h3>
+                        <ul class="nav side-menu">
+                            <li><a href="string.html"><i class="fa fa-font"></i> String</a></li>
+                            <li><a href="number.html"><i class="fa fa-calculator"></i> Number</a></li>
+                            <li><a href="util.html"><i class="fa fa-cog"></i> Util</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav class="" role="navigation">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="row">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Number</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- toComma -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>toComma(Number)</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <blockquote>
+                                    <p>,(comma)가 추가된 표기법으로 변환합니다</p>
+
+                                    <p>
+                                        <small>moc.number.toComma(1000);</small>
+                                    </p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="txtComma">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="mocNumberDemo.toComma()">
+                                            Execute
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="resultComma">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- toComma -->
+
+                <!-- fillZero -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>fillZero(Number, length)</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <blockquote>
+                                    <p>필요시, 해당 길이만큼 0을 앞에 추가합니다</p>
+                                    <p>
+                                        <small>moc.number.fillZero(1, 5);</small>
+                                    </p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="txtFillZeroData1">
+                                        <input type="text" class="form-control" id="txtFillZeroData2" value="5">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="mocNumberDemo.fillZero()">
+                                            Execute
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="resultFillZero">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fillZero -->
+
+                <!-- toBytes -->
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>toBytes(Number, type)</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <blockquote>
+                                    <p>파일 크기 단위로 변환합니다</p>
+                                    <p>
+                                        <small>moc.number.toBytes(1000000, kb, true);</small>
+                                    </p>
+                                </blockquote>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="txtToBytesData1">
+                                        <input type="text" class="form-control" id="txtToBytesData2" value="kb" placeholder="kb, mb, gb, tb, pb, eb, zb, yb">
+                                        <input type="text" class="form-control" id="txtToBytesData3" value="true" placeholder="">
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="mocNumberDemo.toBytes()">
+                                            Execute
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="resultToBytes">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- toBytes -->
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                moc.js by <a href="https://moberan.github.io">Moberan</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="vendors/fastclick/lib/fastclick.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="js/custom.min.js"></script>
+
+<!-- moc.js -->
+<script src="../lib/moc.js"></script>
+
+<script>
+
+//    return ((a * 100) + (b * 100)) / 100;
+
+    var mocNumberDemo = {
+        toComma: function () {
+            var inputValue = $('#txtComma').val();
+            var result = moc.number.toComma(inputValue);
+            $('#resultComma').val(result);
+        },
+        fillZero: function () {
+            var inputValue1 = $('#txtFillZeroData1').val();
+            var inputValue2 = $('#txtFillZeroData2').val();
+            var result = moc.number.fillZero(inputValue1, inputValue2);
+            $('#resultFillZero').val(result);
+        },
+        toBytes: function(){
+            var inputValue1 = $('#txtToBytesData1').val();
+            var inputValue2 = $('#txtToBytesData2').val();
+            var inputValue3 = $('#txtToBytesData3').val();
+            var result = moc.number.toBytes(inputValue1, inputValue2, inputValue3);
+            $('#resultToBytes').val(result);
+        }
+    };
+</script>
+
+</body>
+</html>
